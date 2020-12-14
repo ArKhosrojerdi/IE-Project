@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <title>درمان کده</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/my-bootstrap.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.1-web/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header of the website has implemented here -->
+    <header class="rtl">
+        <div class=" container header-nav">
+            <div class="header-logo">
+                <a href="#">
+                    <img src="assets/images/svgs/header-icon.svg" alt="">
+                </a>
+            </div>
+
+            <ul>
+                <li>
+                    <a href="">
+                        <i class="fas fa-list"></i> لیست تخصص ها
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fas fa-wifi"></i> مشاوره آنلاین
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fas fa-book"></i> مجله پزشکی
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fas fa-user-plus"></i> عضویت پزشکان
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fas fa-box"></i> کرونا سازمانی
+                    </a>
+                </li>
+            </ul>
+
+            <div class="login d-flex flex-column align-items-center justify-content-center">
+                <a href="./pages/login.html" class="link my-auto">
+                    ورود
+                    <i class="fas fa-sign-in-alt"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Body of the index page has implemented here -->
+    <div>
+
+        <!-- Search box -->
+        <section class="container">
+            <div class="search d-flex flex-column justify-content-center align-items-center">
+                <div>
+                    <h1>
+                        درمانکده - رزرو حضوری مطب و مشاوره آنلاین با پزشکان
+                    </h1>
+                </div>
+
+                <div class="search-input rtl">
+                    <input type="text" placeholder="نام پزشک یا تخصصی که میخواهید را بنویسید و کلیک کنید">
+
+                    <div class="search-dropdown d-flex flex-row align-items-center" onclick="openCitiesList()">
+                        <div>
+                            <i class="fas fa-map-marker-alt pin-icon"></i>
+                        </div>
+                        <div class="select-city">
+                            <button type="button" id="city" name="city" class="city">تهران</button>
+                            <ul id="cities">
+                                <li><a href="#">تهران</a></li>
+                                <li><a href="#">پاکدشت</a></li>
+                                <li><a href="#">شهر قدس</a></li>
+                                <li><a href="#">رودهن</a></li>
+                                <li><a href="#">مشهد</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <i class="fas fa-angle-down angle-icon"></i>
+                        </div>
+                    </div>
+
+                    <button>
+                    جستجو
+                </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best specialities -->
+        <section class="container bests p-0">
+            <div class="header d-flex flex-row rtl mt-4">
+                <h5 class="m-0">بهترین تخصص های درمانکده</h5>
+                <a href="#" class="my-auto mr-auto link">مشاهده همه<i class="fas fa-angle-left mr-2"></i></a>
+            </div>
+
+            <div class="d-flex flex-row align-items-center justify-content-between cats">
+                <div class="cat d-flex flex-column">
+                    <div class="icon bg-light-orange d-flex align-items-center justify-content-center">
+                        <img src="./assets/images/pngs/bests/brain.png" alt="" class="">
+                    </div>
+                    <div class="mt-auto">
+                        <p class="m-0 text-center">مغز و اعصاب</p>
+                    </div>
+                </div>
+
+                <div class="cat d-flex flex-column">
+                    <div class="icon bg-light-blue d-flex align-items-center justify-content-center">
+                        <img src="./assets/images/pngs/bests/e125f7c.png" alt="" class="">
+                    </div>
+                    <div class="mt-auto">
+                        <p class="m-0 text-center">گوش، حلق و بینی</p>
+                    </div>
+                </div>
+
+                <div class="cat d-flex flex-column">
+                    <div class="icon bg-light-pink d-flex align-items-center justify-content-center">
+                        <img src="./assets/images/pngs/bests/f05550d.png" alt="" class="">
+                    </div>
+                    <div class="mt-auto">
+                        <p class="m-0 text-center">داخلی</p>
+                    </div>
+                </div>
+
+                <div class="cat d-flex flex-column">
+                    <div class="icon bg-dark-blue d-flex align-items-center justify-content-center">
+                        <img src="./assets/images/pngs/bests/embryo.png" alt="" class="">
+                    </div>
+                    <div class="mt-auto">
+                        <p class="m-0 text-center">زنان و زایمان</p>
+                    </div>
+                </div>
+
+                <div class="cat d-flex flex-column">
+                    <div class="icon bg-light-green d-flex align-items-center justify-content-center">
+                        <img src="./assets/images/pngs/bests/8a932a4.png" alt="" class="">
+                    </div>
+                    <div class="mt-auto">
+                        <p class="m-0 text-center">پوست و مو</p>
+                    </div>
+                </div>
+
+                <div class="cat d-flex flex-column">
+                    <div class="icon bg-light-red d-flex align-items-center justify-content-center">
+                        <img src="./assets/images/pngs/bests/kidney.png" alt="" class="">
+                    </div>
+                    <div class="mt-auto">
+                        <p class="m-0 text-center">اورولوژی</p>
+                    </div>
+                </div>
+
+                <div class="cat d-flex flex-column">
+                    <div class="icon bg-light-purple d-flex align-items-center justify-content-center">
+                        <img src="./assets/images/pngs/bests/d3ab6b5.png" alt="" class="">
+                    </div>
+                    <div class="mt-auto">
+                        <p class="m-0 text-center">ارتوپدی</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comments of users and customers -->
+        <section class="container comments d-flex flex-row rtl py-5 my-5">
+            <div class="d-flex flex-column w-50 px-2 mt-5">
+                <h4 class="mt-5 mb-2">نظرات و روند درمانی بیماران</h4>
+                <p class="w-75 pl-5">
+                    شما می توانید تجربه مراجعه کاربران دیگر به پزشکان را بخوانید و از علت مراجعه سایر بیماران و روند درمانی آن ها آگاهی یابید.
+                </p>
+            </div>
+
+            <div class="w-50 h-100 px-2 outer-carousel">
+
+                <div class="inner-carousel">
+                    <img src="./assets/images/pngs/55d4056.png" alt="" class="icon-comment">
+                    <div class="carousel-item d-flex flex-column justify-content-between align-items-between">
+                        <div>
+                            <p class="py-3 px-3">
+                                بسیار دکتر خوبی هستن. عالیه اصن.
+                            </p>
+                        </div>
+
+                        <div class="doctor px-2 mt-auto">
+                            <div class="body px-2 pt-3 d-flex flex-row align-items-center w-100">
+                                <img src="./assets/images/pngs/doctors/d44355.jpg" alt="" class="px-3">
+
+                                <div class="d-flex flex-column justify-content-center w-50">
+                                    <p class="p-0 m-1">
+                                        دکتر قمرتاج خانبابایی
+                                    </p>
+                                    <p class="p-0 m-1">
+                                        فوق تخصص ریه کودکان
+                                    </p>
+                                </div>
+
+                                <button class="ml-2 mr-auto">
+                                    مشاهده سایر نظرات
+                                </button>
+
+                                <div class="comment-owner">
+                                    <p>نظر سمیرا</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row align-items-center justify-content-center">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Don't worry about Corona section -->
+        <section class="special w-100 rtl">
+            <div class="py-3">
+                <h5 class="mt-4">
+                    نگران کرونا نباشید
+                </h5>
+            </div>
+
+            <div class="body d-flex flex-row justify-content-center">
+                <div class="card pl-5">
+                    <a href="">
+                        <img src="./assets/images/pngs/994ebdc.png" alt="">
+                    </a>
+                    <a href="">
+                        <h4 class="mt-3">
+                            تست PCR و آنتی بادی در محل
+                        </h4>
+                        <p>
+                            اگر در شهرهای تهران، اصفهان، کرج، شیراز و اهواز هستید، می‌‌توانید بدون مراجعه به آزمایشکاه و در محل مدنظر خود آزمایش کرونا بدهید.
+                        </p>
+                    </a>
+                    <button class="w-100 p-3 mt-1">
+                        درخواست آزمایش
+                        <i class="fas fa-angle-left mr-3"></i>
+                    </button>
+                </div>
+                <div class="card pr-5">
+                    <a href="">
+                        <img src="./assets/images/pngs/4126cda.png" alt="">
+                    </a>
+                    <a href="">
+                        <h4 class="mt-3">
+                            مشاوره آنلاین فوری
+                        </h4>
+                        <p>
+                            با تست آنلاین کرونا علائم خود را بررسی کنید و اگر مشکوک بودید میتوانید به صورت فوری با پزشکان عمومی مشاوره آنلاین داشته باشید.
+                        </p>
+                    </a>
+                    <button class="w-100 p-3 mt-1">
+                        درخواست مشاوره فوری
+                        <i class="fas fa-angle-left mr-3"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Darmankade's application section -->
+        <section class="container application d-flex flex-row align-items-center justify-content-between rtl mb-4 p-0">
+            <div class="d-flex flex-column width-480">
+                <div>
+                    <a href="">
+                        <img src="./assets/images/pngs/6177b76.png" alt="">
+                    </a>
+                </div>
+                <div class="d-flex flex-row align-items-center justify-content-center mt-2">
+                    <a href="">
+                        <img src="./assets/images/pngs/0a657d6.png" alt="" class="app-icon mx-2">
+                    </a>
+                    <a href="">
+                        <img src="./assets/images/pngs/apple.png" alt="" class="app-icon mx-2">
+                    </a>
+                    <a href="">
+                        <img src="./assets/images/pngs/aa22ae4.png" alt="" class="app-icon mx-2">
+                    </a>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column width-480">
+                <h5 class="mb-3 mt-0">
+                    دانلود اپلیکیشن درمانکده
+                </h5>
+                <p class="my-1">
+                    با اپلیکیشن درمانکده با پزشکان و روانشناسان آنلاین مشاوره کنید یا برای ویزیت حضوری آنلاین نوبت بگیرید.
+                </p>
+                <div class="mt-4">
+                    <p class="text-bold text-dark-gray">
+                        برای دریافت لینک دانلود، شماره موبایل خود را وارد کنید.
+                    </p>
+
+                    <div class="mt-2 send-link">
+                        <div>
+                            <input type="text" placeholder="مانند ******* ۰۹۱۲">
+                            <button><i class="fas fa-mobile-alt"></i>
+                                ارسال لینک
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="d-flex flex-column align-items-center">
+        <div class="d-flex flex-column align-items-center container">
+            <img src="./assets/images/svgs/footer-icon.svg" alt="" class="mt-2">
+
+            <div class="mt-3">
+                <p class="text-white text-14 lh-30 text-center">
+                    درمانکده، ارائه دهنده خدمات آنلاین سلامت
+                    <br> (... نوبت گیری اینترنتی، مشاوره آنلاین، آزمایش در محل و)
+                </p>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row align-items-start py-0 container justify-content-between rtl">
+            <div class="px-3">
+                <ul class="text-center">
+                    <li>
+                        <a href="">درباره درمانکده</a>
+                    </li>
+                    <li>
+                        <a href="">تماس با ما</a>
+                    </li>
+                    <li>
+                        <a href="">مجله پزشکی</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="w-100 d-flex flex-column align-items-center">
+                <div class="w-50 mx-auto d-flex flex-row justify-content-between">
+                    <a href="" class="text-white"><i class="fab fa-2x fa-linkedin-in"></i></a>
+                    <a href="" class="text-white"><i class="fab fa-2x fa-twitter"></i></a>
+                    <a href="" class="text-white"><i class="fab fa-2x fa-instagram"></i></a>
+                </div>
+
+                <div class="vertical-line bg-white mt-4"></div>
+            </div>
+            <div class="px-3">
+                <ul class="text-center">
+                    <li>
+                        <a href="">سؤالات متداول</a>
+                    </li>
+                    <li>
+                        <a href="">قوانین و مقررات</a>
+                    </li>
+                    <li>
+                        <a href="">شکایت</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container pb-1 d-flex flex-column align-items-center">
+            <div class="w-35">
+                <div>
+                    <p class="text-white text-14 lh-30 text-center mx-auto mt-0">
+                        با ثبت‌نام در خبرنامه درمانکده، اولین نفری باشید که از جدیدترین خبرها، جشنواره‌ها و تخفیف های ویژه ما مطلع می‌شوید
+                    </p>
+                </div>
+
+                <div>
+                    <div class="d-flex flex-row rtl">
+                        <input type="text" placeholder="نام" class="">
+                        <input type="text" placeholder="نام خانوادگی" class="">
+                    </div>
+
+                    <div>
+                        <input type="email" placeholder="ایمیل" class="">
+                    </div>
+                    <div class="send-link mt-2">
+                        <button class="w-100 text-18">عضو می شوم</button>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row justify-content-center mt-3">
+                    <a href="" class="mx-2">
+                        <img src="./assets/images/pngs/logo.aspx" alt="" class="e-namad">
+                    </a>
+                    <a href="" class="mx-2">
+                        <img src="./assets/images/pngs/logo (1).aspx" alt="" class="e-namad">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright alert section -->
+    <div class="container d-flex flex-row justify-content-between rtl py-1">
+        <p class="p-0 text-14 text-gray">تمامی حقوق این سایت برای درمانکده محفوظ است</p>
+        <p class="p-0 text-14 text-gray">
+            طراحی شده با
+            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-fill-red feather feather-heart" data-v-1c02d2dc=""><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" data-v-1c02d2dc=""></path></svg>            توسط تیم درمانکده
+        </p>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
