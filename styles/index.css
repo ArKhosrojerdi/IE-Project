@@ -32,6 +32,14 @@ a {
     text-decoration: none;
 }
 
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 i {
     line-height: 1.5 !important;
 }
@@ -84,6 +92,10 @@ ul {
 
 .bg-white {
     background-color: #fff !important;
+}
+
+.bg-250 {
+    background-color: #fafafa;
 }
 
 .bg-dark-gray {
@@ -147,7 +159,7 @@ header ul li a i {
 }
 
 .link {
-    color: #1780df;
+    color: #1780df !important;
 }
 
 .link:hover {
@@ -159,7 +171,7 @@ header ul li a i {
     margin-right: .25rem;
 }
 
-.container {
+.my-container {
     margin: 0 auto;
     width: 70%;
     padding: 1.5rem 5% 1rem 5%;
@@ -774,4 +786,12 @@ footer input[type=email] {
     transition: .2s all ease-out;
     color: #fff;
     background-color: #fb815e;
+}
+
+.ltr {
+    direction: ltr !important;
+}
+
+.rtl {
+    direction: rtl !important;
 }
