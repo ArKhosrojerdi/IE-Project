@@ -80,13 +80,14 @@
 }
 
 .search-field svg {
-    position: absolute;
-    right: 8%;
-    top: 6.7rem;
+    position: relative;
+    right: .6rem;
+    top: -2.3rem;
     color: #007bff;
 }
 
 .sidebar {
+    height: 650px;
     overflow-y: scroll;
 }
 
@@ -115,8 +116,7 @@
 }
 
 .position-sticky {
-    position: sticky;
-    bottom: 0;
+    position: sticky !important;
 }
 
 .rounded-bottom-10 {
@@ -135,4 +135,22 @@
     max-width: 90%;
     padding: 0 5%;
     margin: auto;
+}
+
+.position-static {
+    position: static;
+}
+
+aside {
+    display: block !important;
+}
+
+.fixed-top {
+    z-index: 1030;
+    position: fixed;
+    top: 0;
+}
+
+.fixed-bottom {
+    bottom: 0;
 }
