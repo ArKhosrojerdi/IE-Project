@@ -41,12 +41,16 @@ a:hover {
 }
 
 i {
-    line-height: 1.5 !important;
+    vertical-align: middle !important;
 }
 
 ul {
     padding: 0;
     margin: 0;
+    list-style: none;
+}
+
+li {
     list-style: none;
 }
 
@@ -80,6 +84,10 @@ ul {
 
 .text-22 {
     font-size: 22px !important;
+}
+
+.text-28 {
+    font-size: 28px !important;
 }
 
 .text-white {
@@ -171,7 +179,7 @@ header ul li a i {
 }
 
 .link:hover {
-    color: #fb815e;
+    color: #fb815e !important;
 }
 
 .login a i {
@@ -545,22 +553,22 @@ header ul li a i {
     width: auto;
 }
 
-.special .body .card {
+.special .body .my-card {
     width: 321.5px;
 }
 
-.special .body .card h4 {
+.special .body .my-card h4 {
     color: #fff;
     text-align: center;
     font-size: 18px;
 }
 
-.special .body .card p {
+.special .body .my-card p {
     color: #fff;
     text-align: justify;
 }
 
-.special .body .card button {
+.special .body .my-card button {
     color: #fff;
     background-color: #fb815e;
     outline: none;
@@ -572,7 +580,7 @@ header ul li a i {
     cursor: pointer;
 }
 
-.special .body .card button:hover {
+.special .body .my-card button:hover {
     transition: .2s all;
     background-color: #fA6f48;
 }
@@ -612,7 +620,7 @@ header ul li a i {
     border: 1px solid #ced4da;
     border-radius: 10px;
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
-    height: 10px;
+    height: 50px;
     padding: 19px 15px;
     color: #495057;
     font-family: "Yekan";
@@ -818,4 +826,63 @@ footer input[type=email] {
 
 .rounded-20 {
     border-radius: 20px;
+}
+
+.position-sticky {
+    position: sticky !important;
+}
+
+.rounded-bottom-10 {
+    border-radius: 0 0 10px 10px;
+}
+
+.text-water-blue {
+    color: #007bff;
+}
+
+.bg-water-blue {
+    background-color: #1780df;
+}
+
+.bg-ice-blue {
+    background-color: #e5f2fe;
+}
+
+.border-light-gray {
+    border: 1px solid #e2e8f0;
+}
+
+.border-orange {
+    border-color: #fb815e;
+}
+
+.border-w2 {
+    border-width: 2px;
+}
+
+.text-orange {
+    color: #fb815e;
+}
+
+.bg-orange {
+    background-color: #fb815e;
+}
+
+.text-dark-mint {
+    color: #4dcc6b;
+}
+
+.bg-light-cyan {
+    background-color: #d7f5f8;
+}
+
+.wifi-icon {
+    color: #20c997;
+    position: absolute;
+    top: 75px;
+    right: 0;
+}
+
+.rounded-circle {
+    border-radius: 50%;
 }
