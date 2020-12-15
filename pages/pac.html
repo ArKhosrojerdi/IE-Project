@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>پکطور | پک‌ها</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+</head>
+
+<body>
+
+    <section class="cellphone w-100">
+        <div class="mx-auto cmsg-container my-lg-5 my-3">
+            <div>
+                <button class="btn float-left" id="close-msg" title="بستن">
+                <i class="fa fa-times"></i>
+            </button>
+            </div>
+            <div class="a-c-box align-items-center">
+                <div class="float-right">
+                    <h4 class="my-4">
+                        شماره تماس خود را وارد کنید:
+                    </h4>
+                </div>
+                <div class="mb-4 mx-auto">
+                    <div class="a-prepend">
+                        <span>+۹۸</span>
+                    </div>
+                    <input type="text" aria-label="شماره تماس" id="cellphone-number" oninput="controlNumber();" onkeypress="validate(event);">
+                </div>
+                <div class="mx-auto mb-4">
+                    <a href="{{route('order.show')}}" class="btn submit-cellphone mx-auto" data-rurl="#!">
+                    تأیید
+                </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{--//header--}}
+    <section class="navigation bg-red">
+        <div class="nav-container">
+            <div class="brand">
+                <a href="{{route('homepage.show')}}">پکتور</a>
+            </div>
+            <nav>
+                <div class="nav-mobile">
+                    <a id="nav-toggle" href="#!"><span></span></a>
+                </div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="{{route('homepage.show')}}">خانه</a>
+                    </li>
+                    <li>
+                        <a href="{{route('products.show')}}">محصولات</a>
+                    </li>
+                    <li>
+                        <a href="{{route('packs.show')}}">پک‌ها</a>
+                    </li>
+                    <li>
+                        <a href="{{route('about.show')}}">درباره ما</a>
+                    </li>
+                    {{--
+                    <li>--}} {{-- <a href="#!">ثبت نام</a>--}} {{-- </li>--}}
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <main role="main">
+
+
+        <div class="album m-0">
+            <div class="container">
+                <div class="row my-lg-5 my-3">
+                    <div class="col-lg-3 col-md-4 a-side p-0">
+                        <div class="text-center mt-2">
+                            <h4 class="mb-0 text-muted w-100">
+                                سبد خرید
+                            </h4>
+                            <hr class="underline-solid">
+                            <ul class="orders" id="orders">
+                                @foreach($packs as $pack)
+                                <li id="{{$pack->id}}" data-cost="{{$pack->price}}" data-name="{{$pack->shop_price}}" hidden>
+                                    <button class="float-left" title="حذف محصول" data-to-hide="{{$pack->id}}" onclick="removePack(this)">
+                                        <i class="fa fa-times"></i>
+                                    </button>
+                                    <h6 class="float-left">{{$pack->display_name}}</h6>
+                                    {{--
+                                    <div class="item-amount">--}} {{-- <small>عدد</small>--}} {{-- <button>-</button>--}} {{-- <input type="text" value="1" min="1" max="800" disabled>--}} {{-- <button>+</button>--}} {{-- </div>--}} {{--
+                                    <div class="d-flex row nowrap td-mix">--}} {{--
+                                        <div class="left-back"></div>--}}
+                                        <div class="item">
+                                            <h5 class="r-align">
+                                                {{App\Utility\UtilityMethods::convertEn2FaDigits($pack->price)}}
+                                                <small>
+                                                تومان
+                                            </small>
+                                            </h5>
+                                        </div>
+                                        {{--
+                                        <div class="left-back"></div>--}} {{--
+                                        <div class="right-back"></div>--}} {{-- </div>--}}
+                                </li>
+                                @endforeach {{-- @endforeach--}} {{--
+                                <li data-index="2" hidden>--}} {{-- <a class="float-left" href="#" title="حذف محصول">X</a>--}} {{--
+                                    <h6 class="float-right">سن ایچ</h6>--}} {{-- --}}{{--
+                                    <div class="item-amount">--}} {{-- --}}{{-- <small>عدد</small>--}} {{-- --}}{{-- <button class="data-down">-</button>--}} {{-- --}}{{-- <input type="text" value="1" min="1" max="800" disabled>--}} {{-- --}}{{-- <button class="data-up">+</button>--}}
+                                        {{-- --}}{{-- </div>--}} {{--
+                                    <div class="m-0 item float-right">--}} {{--
+                                        <h5 class="float-right">۳۴۰ تومان</h5>--}} {{-- </div>--}} {{-- </li>--}}
+                            </ul>
+                            <hr class="underline-solid">
+                            <div class="d-flex flex-column">
+                                <h4 class="mb-3 text-muted w-100">
+                                    تعداد بسته‌ها
+                                </h4>
+                                {{--
+                                <hr class="underline">--}}
+                                <div class="pack-amount">
+                                    <button class="btn data-down" onclick="decreaseAmount();" id="dec-pack-num-btn">-
+                                </button>
+                                    <input type="text" value="۱" min="1" max="800" id="packs-amount" onkeypress="validate(event)" onfocusout="checkEmpty();" onkeyup="changePackAmountData(this.value)">
+                                    <button class="btn data-up" onclick="increaseAmount();" id="inc-pack-num-btn">+</button>
+                                </div>
+                            </div>
+                            <hr class="underline-solid">
+                            <div class="d-flex flex-column">
+                                <h4 class="mb-3 text-muted w-100">
+                                    تخفیف
+                                    <i class="fa fa-gift ml-2"></i>
+                                </h4>
+                                <div class="d-flex flex-column w-100" id="a-redeem">
+                                    <div class="a-input-container mx-auto">
+                                        <input class="mx-auto" type="text" value="" id="redeem-code" placeholder="کد تخفیف را وارد کنید">
+                                    </div>
+                                    <button class="btn mt-2" id="check-redeem-code">اعمال</button>
+                                    <small class="mt-2" id="checking-redeem" hidden>...
+                                    در حال بررسی
+                                </small>
+                                    <small class="mt-2" id="redeem-success" hidden>!
+                                    تخفیف اعمال شد
+                                </small>
+                                    <small class="mt-2" id="no-record" hidden>!
+                                    کد تحفیف نامعتبر است
+                                </small>
+                                    <small class="mt-2" id="at-least3" hidden>!
+                                    حداقل ۳ کاراکتر وارد کنید
+                                </small>
+                                </div>
+                            </div>
+                            <hr class="underline-solid">
+                            <ul class="total-shop-info">
+                                <li>جمع سفارش:
+                                    <span id="total-order">۰
+                                </span>
+                                    <span>
+                                    تومان
+                                </span>
+                                </li>
+                                <li>تعداد بسته:
+                                    <span id="p-amount" class="text-left">۱
+                                </span>
+                                    <span>
+                                    عدد
+                                </span>
+                                </li>
+                                <li>هزینه بسته‌بندی:
+                                    <span id="p-price">۲۰۰۰
+                                </span>
+                                    <span>
+                                    تومان
+                                </span>
+                                </li>
+                                <li>هزینه ارسال:
+                                    <span id="delivery">۱۵۰۰۰
+                                </span>
+                                    <span>
+                                    تومان
+                                </span>
+                                </li>
+                                <li>مالیات:
+                                    <span id="tax">۰
+                                </span>
+                                    <span>
+                                    تومان
+                                </span>
+                                </li>
+                                <li>تخفیف:
+                                    <span id="redeem">۰
+                                </span>
+                                    <span>
+                                    تومان
+                                </span>
+                                </li>
+                                <li>هزینه کل:
+                                    <span id="total-cost">۱۷۰۰۰
+
+                                </span>
+                                    <span>
+                                    تومان
+                                </span>
+                                </li>
+                                <li>قابل پرداخت:
+                                    <span id="payable">۱۷۰۰۰
+
+                                </span>
+                                    <span>
+                                    تومان
+                                </span>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="mb-3">
+                            <button class="btn complete mb-2" id="submit-order">
+                            ثبت سفارش
+                        </button>
+                            <h6 class="text-center p-1 alert-danger text-danger" id="no-item-selected" style="display: none">
+                                !آیتمی انتخاب نشده است
+                            </h6>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-9 col-md-8">
+                        <div class="r-align">
+                            <h2 class="product-header">پک‌ها</h2>
+                            {{--
+                            <div class="">--}} {{--
+                                <ul class="d-flex justify-content-around mt-3 mb-0 categories w-100">--}} {{--
+                                    <li class="active" onclick=""><a href="#wedding">صبحانه</a></li>--}} {{--
+                                    <li class="" onclick=""><a href="#funeral">ترحیم</a></li>--}} {{--
+                                    <li class="" onclick=""><a href="#celeb">همایش</a></li>--}} {{--
+                                    <li class="" onclick=""><a href="#party">تولد</a></li>--}} {{-- </ul>--}} {{-- </div>--}}
+                        </div>
+                        <div class="row d-flex flex-row a-categories r-align my-4 mx-0">
+                            <div class="row m-0 mt-4 mb-3 w-100">
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-4 text-center">
+                                    <a class="py-2 active" href="#" data-category="1">
+                                    صبحانه
+                                </a>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
+                                    <a class="py-2" href="#" data-category="2">
+                                    ترحیم
+                                </a>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
+                                    <a class="py-2" href="#" data-category="3">
+                                    همایش
+                                </a>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
+                                    <a class="py-2" href="#" data-category="4">
+                                    تولد
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row product-items m-0" style="direction: rtl;">
+
+                            <div class="col-12" id="breakfast" data-category="1" style="display: block">
+                                <h3 class="text-center p-5 border-bottom">
+                                    صبحانه
+                                </h3>
+                            </div>
+                            <div class="col-12" id="funeral" data-category="2" style="display: none">
+                                <h3 class="text-center p-5 border-bottom">
+                                    ترحیم
+                                </h3>
+                            </div>
+
+                            <div class="col-12" id="conference" data-category="3" style="display: none">
+                                <h3 class="text-center p-5 border-bottom">
+                                    همایش
+                                </h3>
+                            </div>
+
+                            <div class="col-12" id="birthday" data-category="4" style="display: none">
+                                <h3 class="text-center p-5 border-bottom">
+                                    تولد
+                                </h3>
+                            </div>
+
+                            @foreach($packs as $pack)
+                            <div class="col-lg-4 col-md-6 my-2 packs-items" data-category="1">
+                                <div class="a-card">
+                                    <div class="card border-0">
+                                        <img class="card-img-top" src="{{ asset(" img/$pack->image") }}" alt="{{$pack->display_name}}"/>
+                                        <div class="a-card-body">
+                                            <button class="card-text text-right exp-dets">
+                                                {{$pack->display_name}}
+                                                <i class="fa fa-angle-down mr-2"></i>
+                                            </button>
+                                            <ul class="mb-0" hidden>
+                                                <li>
+                                                    {{$pack->details}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="bg-red p-2 db-b rounded-bottom" style="direction: ltr;">
+                                        <div class="d-flex justify-content-between align-items-center text-left">
+                                            <button type="button" class="btn cart px-3" data-index="{{$pack->id}}" data-name="{{$pack->display_name}}" id="add[{{$pack->id}}]" data-cost="{{$pack->price}}" data-to-hide="{{$pack->id}}" onclick="addPack(this);">
+                                                <i class="fa fa-cart-plus"></i>
+                                            </button>
+                                            <span class="text-muted r-align">
+                                            <span class="text-light">
+                                                {{App\Utility\UtilityMethods::convertEn2FaDigits($pack->price)}}
+                                            </span>
+                                            <span class="text-light">تومان</span>
+                                            <s>
+                                                {{App\Utility\UtilityMethods::convertEn2FaDigits($pack->shop_price)}}
+                                            </s>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+                        </div>
+
+                        <div class="row d-flex flex-row r-align mt-4 mb-2 mb-lg-0 mx-0 bg-red p-3 babypowder rounded shadow">
+                            <div class="mx-auto">
+                                <h5 class="text-center p-2 border-bottom">
+                                    پک دل بخواهتو پیدا نکردی؟
+                                </h5>
+                                <div class="mx-auto mt-3 text-center">
+                                    <a href="{{ route(" products.show ") }}" class="btn mx-auto bg-and space">
+                                    اینجا پک خودتو بساز
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <section class="container">
+            <div class="container r-align mt-lg-5 mt-3 w-100">
+                <ul class="row">
+                    <li class="col-lg-3 col-md-6 col-sm-12 col-12">
+                        <h5 class="a-fa-footer mb-3">
+                            <i class="fa fa-map-pin babypowder"></i>
+                        </h5>
+                        <p>
+                            تهران،بالاتر از میدان ونک،برج نگار
+                        </p>
+                    </li>
+                    <li class="col-lg-3 col-md-6 col-sm-12 col-12">
+                        <h5 class="a-fa-footer mb-3">
+                            <i class="fa fa-phone babypowder"></i>
+                        </h5>
+                        <p>
+                            ۱۸۱۲ ۸۸۶۴ (۰۲۱)
+                            <span>
+                        <a href="https://api.whatsapp.com/send?phone=+989127653629" class="mr-2"><i
+                                class="fa fa-whatsapp babypowder"></i>
+                        </a>
+                        </span>
+                        </p>
+                    </li>
+                    <li class="col-lg-3 col-md-6 col-sm-12 col-12">
+                        <h5 class="a-fa-footer mb-3">
+                            <i class="fa fa-fax babypowder"></i>
+                        </h5>
+                        <p>
+                            ۱۸۱۲ ۸۸۶۴ (۰۲۱)
+                        </p>
+                    </li>
+                    <li class="col-lg-3 col-md-6 col-sm-12 col-12">
+                        <h5 class="a-fa-footer mb-3">
+                            <i class="fa fa-at babypowder"></i>
+                        </h5>
+                        <p>
+                            packtor@gmail.com
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="ft-social">
+            <ul class="ft-social-list">
+                <li>
+                    <a href="https://www.instagram.com/ar_khosrojerdi/"><i class="fa fa-instagram babypowder"></i></a>
+                </li>
+                <li>
+                    <a href="https://t.me/wishiwasspecial"><i class="fa fa-telegram babypowder"></i></a>
+                </li>
+            </ul>
+        </section>
+
+        {{--
+        <section class="ft-legal">--}} {{--
+            <ul class="ft-legal-list r-align">--}} {{--
+                <li class="text-right">تمامی حقوق محفوظ است.--}} {{-- <span class="font-weight-lighter">--}}
+    {{--                تیم پکتور - ۱۳۹۸--}}
+    {{--                </span>--}} {{-- </li>--}} {{-- </ul>--}} {{-- </section>--}}
+    </footer>
+
+    <div class="a-call">
+        <a class="r-align" href="tel:02188641812">
+        ۱۸۱۲
+        ۸۸۶۴
+        <i class="fa fa-phone mr-2"></i>
+    </a>
+    </div>
+
+    <div id="scroll-top" class="text-center">
+        <a href="#">
+            <i class="fa fa-angle-double-up baby"></i>
+        </a>
+    </div>
+</body>
+
+</html>

@@ -484,14 +484,6 @@
     margin-right: auto !important;
 }
 
-.ltr {
-    direction: ltr !important;
-}
-
-.rtl {
-    direction: rtl !important;
-}
-
 .text-bold {
     font-weight: 700 !important;
 }
