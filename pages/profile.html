@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <title>درمانکده - لیست تخصص ها</title>
 
-    <!-- <link href="../styles/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
 
     <!-- font-awesome -->
@@ -15,7 +15,6 @@
 
     <!-- Our styles -->
     <link rel="stylesheet" href="../styles/index.css">
-    <link rel="stylesheet" href="../styles/specialties.css">
     <link rel="stylesheet" href="../styles/my-bootstrap.css">
 </head>
 
@@ -67,26 +66,32 @@
         </div>
     </header>
 
-    <main role="main" class="bg-250">
-        <section class="container pt-2">
-            <nav class="py-3">
+
+    <!-- Directory of webpage or the breadcrumb -->
+    <nav class="w-100 bg-250">
+        <div class="container pt-2">
+            <div class="py-3">
                 <ol class="row rtl p-0 m-0">
                     <li class="breadcrumb-item">
                         <a href="#" class="text-water-blue text-normal">
-                            درمانکده
-                            <i class="fas fa-angle-left mr-2"></i>
-                        </a>
+                        درمانکده
+                        <i class="fas fa-angle-left mr-2"></i>
+                    </a>
 
                         <a href="#" class="text-water-blue text-normal mr-2">
-                            متخصص داخلی
-                            <i class="fas fa-angle-left mr-2"></i>
-                        </a>
+                        متخصص داخلی
+                        <i class="fas fa-angle-left mr-2"></i>
+                    </a>
                     </li>
                     <li class="text-light-gray mr-2" aria-current="page">آقای دکتر محمدرضا عشقی</li>
                 </ol>
-            </nav>
-        </section>
+            </div>
+        </div>
+    </nav>
 
+    <main role="main" class="bg-250">
+
+        <!-- Informations about the doctor or the specialist -->
         <section class="container py-0 rtl">
             <div class="row w-100 mx-auto">
 
@@ -94,6 +99,8 @@
                 <div class="col-md-4 text-light-gray px-0 position-static">
                     <aside class="w-100 position-sticky fixed-top">
                         <div class="px-2 py-3 bg-water-blue rounded-10">
+
+                            <!-- Avatar of doctor and buttons at corners -->
                             <div class="row mx-auto justify-content-between mt-2">
                                 <svg data-v-58d4bfc9="" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hover-p text-white feather feather-share-2 mx-3"><circle data-v-58d4bfc9="" cx="18" cy="5" r="3"></circle><circle data-v-58d4bfc9="" cx="6" cy="12" r="3"></circle><circle data-v-58d4bfc9="" cx="18" cy="19" r="3"></circle><line data-v-58d4bfc9="" x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line data-v-58d4bfc9="" x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
 
@@ -104,18 +111,21 @@
                                 <svg data-v-390d7861="" xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hover-p feather feather-heart text-white mx-3"><path data-v-390d7861="" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                             </div>
 
+                            <!-- Full name of doctor and his/her specialty -->
                             <div class="d-flex flex-column align-items-center justify-content-center mt-3 mb-5">
                                 <h5 class="text-white">محمدرضا عشقی</h5>
                                 <h6 class="text-14 text-white lh-30 mb-0">فوق تخصص مغز و اعصاب</h6>
                                 <h6 class="text-14 text-white lh-30 mb-0">شماره نظام پزشکی : ۸۵۸۵۸</h6>
                             </div>
 
+                            <!-- Availablity features -->
                             <div class="w-100 rounded-10 bg-light-cyan p-3 text-center">
                                 <h5 class="text-14 text-normal m-0">
                                     <svg data-v-543f147a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#20c997" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-cyan ml-2 feather feather-wifi"><path data-v-543f147a="" d="M5 12.55a11 11 0 0 1 14.08 0"></path><path data-v-543f147a="" d="M1.42 9a16 16 0 0 1 21.16 0"></path><path data-v-543f147a="" d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line data-v-543f147a="" x1="12" y1="20" x2="12" y2="20"></line></svg>                                    امکان دریافت مشاوره تصویری ، صوتی ، متنی
                                 </h5>
                             </div>
 
+                            <!-- Experience and ... -->
                             <div class="bg-white rounded-10 mx-auto p-2 row mt-3">
                                 <div class="col-4 d-flex flex-column text-center">
                                     <div class="mb-1">
@@ -160,6 +170,8 @@
                     <div class="row w-100 m-0">
                         <!-- Visit time section -->
                         <div class="w-100 border-light-gray rounded-10 bg-white mb-3">
+
+                            <!-- Header -->
                             <div class="bg-water-blue p-3 d-flex flex-row justify-content-between align-items-center rounded-top-10">
                                 <div class="d-flex flex-row">
                                     <div class="py-2 px-3 bg-light-blue rounded">
@@ -178,7 +190,10 @@
                                 </div>
                             </div>
 
+                            <!-- Slider and times -->
                             <div class="p-3">
+
+                                <!-- Days of availablity -->
                                 <div class="mt-2 mb-3 d-flex flex-row align-items-center justify-content-center">
                                     <button class="btn btn-outline-primary rounded-circle"><i class="fas fa-angle-right pl-1"></i></button>
 
@@ -254,6 +269,7 @@
                                     <button class="btn btn-outline-primary rounded-circle"><i class="fas fa-angle-left pr-1"></i></button>
                                 </div>
 
+                                <!-- Hours of availablity -->
                                 <div class="border border-light-gray rounded-10 p-3">
                                     <div class="text-right">
                                         <h5 class="text-light-gray text-16">
@@ -272,6 +288,8 @@
                         <!-- Comments with score box -->
                         <div class="w-100 border-light-gray rounded-10 bg-white text-right mb-3">
                             <div class="p-3 row mx-auto justify-content-between">
+
+                                <!-- Score box -->
                                 <div class="col-2 text-water-blue score-box rounded p-2 text-center">
                                     <h1 class="text-bold">۴.۴</h1>
                                     <span class="m-0">
@@ -284,6 +302,8 @@
                                     <h5 class="mt-1 mb-0 text-12 text-light-gray">از ۲۵ نظر</h5>
                                 </div>
 
+
+                                <!-- Comments of people slider -->
                                 <div class="col-10">
                                     <div class="text-right">
                                         <h5 class="text-light-gray text-14 mb-3">
@@ -299,6 +319,8 @@
                                         <div class="dot ml-1"></div>
                                         <div class="dot ml-1"></div>
                                     </div>
+
+                                    <!-- Arrow down button -->
                                     <button class="btn rounded-circle bg-250 text-water-blue go-to-comments"><i class="fas fa-arrow-down"></i></button>
                                 </div>
                             </div>
@@ -306,6 +328,8 @@
 
                         <!-- Address and days of visits -->
                         <div class="w-100 border-light-gray rounded-10 bg-white">
+
+                            <!-- Tabs -->
                             <div class="card-header text-right p-0">
                                 <button class="my-btn p-3 tab active rounded-top-right-10">
                                     <i class="fas fa-map ml-2"></i>
@@ -317,11 +341,16 @@
                                 </button>
                             </div>
 
+                            <!-- Map and address -->
                             <div class="p-3">
                                 <div class="row">
+                                    <!-- Map -->
                                     <div class="col-4">
                                         <a href=""><img src="../assets/images/pngs/locations/205image.png" alt="" class="w-100 rounded-10"></a>
                                     </div>
+
+
+                                    <!-- Address -->
                                     <div class="col-8 text-right">
                                         <h5 class="text-gray text-18 mb-3">
                                             آدرس مطب ۱ :
@@ -340,8 +369,11 @@
                             </div>
                         </div>
 
+
                         <!-- Comments  -->
                         <div class="w-100 border-light-gray rounded-10 bg-white text-right mt-3">
+
+                            <!-- Header -->
                             <div class="card-header d-flex flex-row">
                                 <div class="ml-3">
                                     <i class="fas fa-comment-alt text-gray"></i>
@@ -356,7 +388,11 @@
                                 </div>
                             </div>
 
+
+                            <!-- Body -->
                             <div class="p-3">
+
+                                <!-- Doctor's score and percentage of stars -->
                                 <div class="row px-2">
                                     <div class="col-6">
                                         <h5 class="text-gray text-16">
@@ -364,63 +400,73 @@
                                         </h5>
 
                                         <div class="w-100">
-                                            <div class="d-flex flex-row mt-2 align-items-center justify-content-between">
-                                                <div>
-                                                    <h5 class="text-black-50 text-16 m-0">۵ ستاره</h5>
+                                            <div class="d-flex flex-row mt-2 align-items-center">
+                                                <div class="w-90 d-flex flex-row align-items-center">
+                                                    <div class="w-25">
+                                                        <h5 class="text-black-50 text-16 m-0">۵ ستاره</h5>
+                                                    </div>
+                                                    <div class="progress w-75">
+                                                        <div class="progress-bar" role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100" style="width: 64%;"></div>
+                                                    </div>
                                                 </div>
-                                                <div class="progress w-75">
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100" style="width: 64%;"></div>
-                                                </div>
-                                                <div>
-                                                    <p class="text-black-50 m-0">۱۶</p>
-                                                </div>
-                                            </div>
-
-                                            <div class="d-flex flex-row mt-2 align-items-center justify-content-between">
-                                                <div>
-                                                    <h5 class="text-black-50 text-16 m-0">۴ ستاره</h5>
-                                                </div>
-                                                <div class="progress w-75">
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 16%;"></div>
-                                                </div>
-                                                <div>
-                                                    <p class="text-black-50 m-0">۴</p>
+                                                <div class="w-10">
+                                                    <p class="text-black-50 m-0 text-center">۱۶</p>
                                                 </div>
                                             </div>
 
                                             <div class="d-flex flex-row mt-2 align-items-center justify-content-between">
-                                                <div>
-                                                    <h5 class="text-black-50 text-16 m-0">۳ ستاره</h5>
+                                                <div class="w-90 d-flex flex-row align-items-center">
+                                                    <div class="w-25">
+                                                        <h5 class="text-black-50 text-16 m-0">۴ ستاره</h5>
+                                                    </div>
+                                                    <div class="progress w-75">
+                                                        <div class="progress-bar" role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100" style="width: 16%;"></div>
+                                                    </div>
                                                 </div>
-                                                <div class="progress w-75">
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"></div>
-                                                </div>
-                                                <div>
-                                                    <p class="text-black-50 m-0">۵</p>
-                                                </div>
-                                            </div>
-
-                                            <div class="d-flex flex-row mt-2 align-items-center justify-content-between">
-                                                <div>
-                                                    <h5 class="text-black-50 text-16 m-0">۲ ستاره</h5>
-                                                </div>
-                                                <div class="progress w-75">
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
-                                                </div>
-                                                <div>
-                                                    <p class="text-black-50 m-0">۰</p>
+                                                <div class="w-10">
+                                                    <p class="text-black-50 m-0 text-center">۴</p>
                                                 </div>
                                             </div>
 
                                             <div class="d-flex flex-row mt-2 align-items-center justify-content-between">
-                                                <div>
-                                                    <h5 class="text-black-50 text-16 m-0">۱ ستاره</h5>
+                                                <div class="w-90 d-flex flex-row align-items-center">
+                                                    <div class="w-25">
+                                                        <h5 class="text-black-50 text-16 m-0">۳ ستاره</h5>
+                                                    </div>
+                                                    <div class="progress w-75">
+                                                        <div class="progress-bar" role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"></div>
+                                                    </div>
                                                 </div>
-                                                <div class="progress w-75">
-                                                    <div class="progress-bar" role="progressbar" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                                                <div class="w-10">
+                                                    <p class="text-black-50 m-0 text-center">۵</p>
                                                 </div>
-                                                <div>
-                                                    <p class="text-black-50 m-0">۰</p>
+                                            </div>
+
+                                            <div class="d-flex flex-row mt-2 align-items-center justify-content-between">
+                                                <div class="w-90 d-flex flex-row align-items-center">
+                                                    <div class="w-25">
+                                                        <h5 class="text-black-50 text-16 m-0">۲ ستاره</h5>
+                                                    </div>
+                                                    <div class="progress w-75">
+                                                        <div class="progress-bar" role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="w-10">
+                                                    <p class="text-black-50 m-0 text-center">۰</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex flex-row mt-2 align-items-center justify-content-between">
+                                                <div class="w-90 d-flex flex-row align-items-center">
+                                                    <div class="w-25">
+                                                        <h5 class="text-black-50 text-16 m-0">۱ ستاره</h5>
+                                                    </div>
+                                                    <div class="progress w-75">
+                                                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="w-10">
+                                                    <p class="text-black-50 m-0 text-center">۰</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -433,6 +479,8 @@
                                     </div>
                                 </div>
 
+
+                                <!-- Sort -->
                                 <div class="border-light-gray rounded-10 bg-white text-right mt-3">
                                     <div class="p-2 row m-auto align-items-center">
                                         <h5 class="text-16 text-dark-gray m-0">
@@ -445,6 +493,8 @@
                                     </div>
                                 </div>
 
+
+                                <!-- Comment no.1 -->
                                 <div class="w-100 rounded-10 bg-white border-light-gray mt-3">
                                     <div class="card-header py-1 px-3">
                                         <div class="d-flex flex-row align-items-center justify-content-between">
@@ -493,6 +543,8 @@
 
                                 </div>
 
+
+                                <!-- Comment no.2 -->
                                 <div class="w-100 rounded-10 bg-white border-light-gray mt-3">
                                     <div class="card-header py-1 px-3">
                                         <div class="d-flex flex-row align-items-center justify-content-between">
@@ -539,6 +591,8 @@
                                     </div>
                                 </div>
 
+
+                                <!-- Comment no.3 -->
                                 <div class="w-100 rounded-10 bg-white border-light-gray mt-3">
                                     <div class="card-header py-1 px-3">
                                         <div class="d-flex flex-row align-items-center justify-content-between">
@@ -585,6 +639,8 @@
                                     </div>
                                 </div>
 
+
+                                <!-- Comment no.4 -->
                                 <div class="w-100 rounded-10 bg-white border-light-gray mt-3">
                                     <div class="card-header py-1 px-3">
                                         <div class="d-flex flex-row align-items-center justify-content-between">
@@ -631,6 +687,8 @@
                                     </div>
                                 </div>
 
+
+                                <!-- Comment no.5 -->
                                 <div class="w-100 rounded-10 bg-white border-light-gray mt-3">
                                     <div class="card-header py-1 px-3">
                                         <div class="d-flex flex-row align-items-center justify-content-between">
@@ -682,7 +740,6 @@
                 </div>
             </div>
         </section>
-
 
 
         <!-- Don't worry about Corona section -->
