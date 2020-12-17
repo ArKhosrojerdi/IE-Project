@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/specialties.css">
     <link rel="stylesheet" href="../styles/my-bootstrap.css">
-
 </head>
 
 <body>
@@ -38,7 +37,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="./doctors.html">
                         <i class="fas fa-wifi"></i> مشاوره آنلاین
                     </a>
                 </li>
@@ -111,8 +110,8 @@
                                 <h6 class="text-14 text-white lh-30 mb-0">شماره نظام پزشکی : ۸۵۸۵۸</h6>
                             </div>
 
-                            <div class="w-100 rounded-10 bg-light-cyan p-2 text-center">
-                                <h5 class="text-14 text-normal">
+                            <div class="w-100 rounded-10 bg-light-cyan p-3 text-center">
+                                <h5 class="text-14 text-normal m-0">
                                     <svg data-v-543f147a="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#20c997" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-cyan ml-2 feather feather-wifi"><path data-v-543f147a="" d="M5 12.55a11 11 0 0 1 14.08 0"></path><path data-v-543f147a="" d="M1.42 9a16 16 0 0 1 21.16 0"></path><path data-v-543f147a="" d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line data-v-543f147a="" x1="12" y1="20" x2="12" y2="20"></line></svg>                                    امکان دریافت مشاوره تصویری ، صوتی ، متنی
                                 </h5>
                             </div>
@@ -159,7 +158,8 @@
                 <!-- Left panel section -->
                 <div class="mx-auto col-md-8 pl-0">
                     <div class="row w-100 m-0">
-                        <div class="w-100 border border-light-gray rounded-10 bg-white">
+                        <!-- Visit time section -->
+                        <div class="w-100 border-light-gray rounded-10 bg-white mb-3">
                             <div class="bg-water-blue p-3 d-flex flex-row justify-content-between align-items-center rounded-top-10">
                                 <div class="d-flex flex-row">
                                     <div class="py-2 px-3 bg-light-blue rounded">
@@ -180,13 +180,11 @@
 
                             <div class="p-3">
                                 <div class="mt-2 mb-3 d-flex flex-row align-items-center justify-content-center">
-                                    <!-- <div class="px-2"> -->
-                                    <button class="btn btn-outline-primary rounded-circle"><i class="fas fa-angle-right px-1"></i></button>
-                                    <!-- </div> -->
+                                    <button class="btn btn-outline-primary rounded-circle"><i class="fas fa-angle-right pl-1"></i></button>
 
                                     <div class="date-slider w-100">
                                         <div class="day-container">
-                                            <div class="day">
+                                            <button class="day">
                                                 <h6 class="text-normal text-16 mb-0 mt-2">
                                                     یک‌شنبه
                                                 </h6>
@@ -194,10 +192,10 @@
                                                     ۱۶
                                                 </h5>
                                                 <h6 class="text-12 text-normal">آذر</h6>
-                                            </div>
+                                            </button>
                                         </div>
                                         <div class="day-container">
-                                            <div class="day active">
+                                            <button class="day active">
                                                 <h6 class="text-normal text-16 mb-0 mt-2">
                                                     دوشنبه
                                                 </h6>
@@ -205,10 +203,10 @@
                                                     ۱۷
                                                 </h5>
                                                 <h6 class="text-12 text-normal">آذر</h6>
-                                            </div>
+                                            </button>
                                         </div>
                                         <div class="day-container">
-                                            <div class="day">
+                                            <button class="day">
                                                 <h6 class="text-normal text-16 mb-0 mt-2">
                                                     سه‌شنبه
                                                 </h6>
@@ -216,10 +214,10 @@
                                                     ۱۸
                                                 </h5>
                                                 <h6 class="text-12 text-normal">آذر</h6>
-                                            </div>
+                                            </button>
                                         </div>
                                         <div class="day-container">
-                                            <div class="day disabled">
+                                            <button class="day" disabled>
                                                 <h6 class="text-normal text-16 mb-0 mt-2">
                                                     چهارشنبه
                                                 </h6>
@@ -227,10 +225,10 @@
                                                     ۱۸
                                                 </h5>
                                                 <h6 class="text-12 text-normal">آذر</h6>
-                                            </div>
+                                            </button>
                                         </div>
                                         <div class="day-container">
-                                            <div class="day disabled">
+                                            <button class="day" disabled>
                                                 <h6 class="text-normal text-16 mb-0 mt-2">
                                                     پنج‌شنبه
                                                 </h6>
@@ -238,10 +236,10 @@
                                                     ۲۰
                                                 </h5>
                                                 <h6 class="text-12 text-normal">آذر</h6>
-                                            </div>
+                                            </button>
                                         </div>
                                         <div class="day-container">
-                                            <div class="day disabled">
+                                            <button class="day" disabled>
                                                 <h6 class="text-normal text-16 mb-0 mt-2">
                                                     جمعه
                                                 </h6>
@@ -249,13 +247,11 @@
                                                     ۲۱
                                                 </h5>
                                                 <h6 class="text-12 text-normal">آذر</h6>
-                                            </div>
+                                            </button>
                                         </div>
                                     </div>
 
-                                    <!-- <div class="px-2"> -->
-                                    <button class="btn btn-outline-primary rounded-circle"><i class="fas fa-angle-left px-1"></i></button>
-                                    <!-- </div> -->
+                                    <button class="btn btn-outline-primary rounded-circle"><i class="fas fa-angle-left pr-1"></i></button>
                                 </div>
 
                                 <div class="border border-light-gray rounded-10 p-3">
@@ -273,16 +269,413 @@
                             </div>
                         </div>
 
-                        <!-- Sort nav -->
+                        <!-- Comments with score box -->
                         <div class="w-100 border-light-gray rounded-10 bg-white text-right mb-3">
-                            <div class="p-3 row m-auto align-items-center">
-                                <h5 class="text-18 text-dark-gray m-0">
-                                    <i class="fas fa-sort-amount-down ml-2"></i> مرتب سازی بر اساس:
-                                </h5>
+                            <div class="p-3 row mx-auto justify-content-between">
+                                <div class="col-2 text-water-blue score-box rounded p-2 text-center">
+                                    <h1 class="text-bold">۴.۴</h1>
+                                    <span class="m-0">
+                                        <i class="fas fa-star text-water-blue text-12" style="overflow: hidden;"></i>
+                                        <i class="fas fa-star text-water-blue text-12"></i>
+                                        <i class="fas fa-star text-water-blue text-12"></i>
+                                        <i class="fas fa-star text-water-blue text-12"></i>
+                                        <i class="fas fa-star text-water-blue text-12"></i>
+                                    </span>
+                                    <h5 class="mt-1 mb-0 text-12 text-light-gray">از ۲۵ نظر</h5>
+                                </div>
 
-                                <a href="" class="py-1 px-2 text-14 mx-3 bg-water-blue text-white rounded-10">منتخب</a>
-                                <a href="" class="py-1 px-2 text-14 mx-3 text-light-gray">بیشترین رضایتمندی</a>
-                                <a href="" class="py-1 px-2 text-14 mx-3 text-light-gray">زودترین نوبت</a>
+                                <div class="col-10">
+                                    <div class="text-right">
+                                        <h5 class="text-light-gray text-14 mb-3">
+                                            <i class="fas fa-comment-alt ml-2 text-18"></i> نظر مهسا:
+                                        </h5>
+                                        <p class="text-gray text-justify">
+                                            دکتر خوبی هستن.ولی همش با گوشی ور میرفت .سریع تو دفترچه که هرچی لازم بودو نوشت بعد گوشیشو برداشت.معذب شدم سوالام یادم رفت با این کاری که کردن.
+                                        </p>
+                                    </div>
+                                    <div class="d-flex flex-row justify-content-center">
+                                        <div class="dot bg-orange ml-1"></div>
+                                        <div class="dot ml-1"></div>
+                                        <div class="dot ml-1"></div>
+                                        <div class="dot ml-1"></div>
+                                    </div>
+                                    <button class="btn rounded-circle bg-250 text-water-blue go-to-comments"><i class="fas fa-arrow-down"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Address and days of visits -->
+                        <div class="w-100 border-light-gray rounded-10 bg-white">
+                            <div class="card-header text-right p-0">
+                                <button class="my-btn p-3 tab active rounded-top-right-10">
+                                    <i class="fas fa-map ml-2"></i>
+                                    اطلاعات مطب
+                                </button>
+                                <button class="hover-orange my-btn bg-transparent p-3 hover-orange text-black-50">
+                                    <i class="fas fa-calendar ml-2"></i>
+                                    روزهای حضور
+                                </button>
+                            </div>
+
+                            <div class="p-3">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href=""><img src="../assets/images/pngs/locations/205image.png" alt="" class="w-100 rounded-10"></a>
+                                    </div>
+                                    <div class="col-8 text-right">
+                                        <h5 class="text-gray text-18 mb-3">
+                                            آدرس مطب ۱ :
+                                        </h5>
+                                        <p class="text-gray text-14 mb-3">
+                                            خیابان سعادت آباد، نبش خیابان 27 - پلاک 18 - بالای پرده سرای یاشار
+                                        </p>
+                                        <h5 class="text-dark-gray text-14 mb-0">
+                                            <b>
+                                                تلفن گویا :
+                                            </b>
+                                            <a href="" class="hover-orange">۰۲۱۶۲۷۴۵۶۴۳</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Comments  -->
+                        <div class="w-100 border-light-gray rounded-10 bg-white text-right mt-3">
+                            <div class="card-header d-flex flex-row">
+                                <div class="ml-3">
+                                    <i class="fas fa-comment-alt text-gray"></i>
+                                </div>
+                                <div>
+                                    <h5 class="text-gray mb-1">
+                                        نظرات کاربران (تعداد کل نظرات :25)
+                                    </h5>
+                                    <p class="text-black-50 m-0 text-12">
+                                        در این قسمت شما می توانید تجربه مراجعه کاربران دیگر به مطب آقای دکتر محمدرضا عشقی را بخوانید.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="p-3">
+                                <div class="row px-2">
+                                    <div class="col-6">
+                                        <h5 class="text-gray text-16">
+                                            <i class="fas fa-star"></i> امتیاز به پزشک
+                                        </h5>
+
+                                        <div class="w-100">
+                                            <div class="d-flex flex-row mt-2 align-items-center justify-content-between">
+                                                <div>
+                                                    <h5 class="text-black-50 text-16 m-0">۵ ستاره</h5>
+                                                </div>
+                                                <div class="progress w-75">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100" style="width: 64%;"></div>
+                                                </div>
+                                                <div>
+                                                    <p class="text-black-50 m-0">۱۶</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex flex-row mt-2 align-items-center justify-content-between">
+                                                <div>
+                                                    <h5 class="text-black-50 text-16 m-0">۴ ستاره</h5>
+                                                </div>
+                                                <div class="progress w-75">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 16%;"></div>
+                                                </div>
+                                                <div>
+                                                    <p class="text-black-50 m-0">۴</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex flex-row mt-2 align-items-center justify-content-between">
+                                                <div>
+                                                    <h5 class="text-black-50 text-16 m-0">۳ ستاره</h5>
+                                                </div>
+                                                <div class="progress w-75">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"></div>
+                                                </div>
+                                                <div>
+                                                    <p class="text-black-50 m-0">۵</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex flex-row mt-2 align-items-center justify-content-between">
+                                                <div>
+                                                    <h5 class="text-black-50 text-16 m-0">۲ ستاره</h5>
+                                                </div>
+                                                <div class="progress w-75">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                                                </div>
+                                                <div>
+                                                    <p class="text-black-50 m-0">۰</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex flex-row mt-2 align-items-center justify-content-between">
+                                                <div>
+                                                    <h5 class="text-black-50 text-16 m-0">۱ ستاره</h5>
+                                                </div>
+                                                <div class="progress w-75">
+                                                    <div class="progress-bar" role="progressbar" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                                                </div>
+                                                <div>
+                                                    <p class="text-black-50 m-0">۰</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <h5 class="text-gray text-16">
+                                            <i class="fas fa-stopwatch"></i> میانگین زمان انتظار برای ویزیت
+                                        </h5>
+                                        <h5 class="text-gray text-14 mr-3 pr-1">۴۵ دقیقه</h5>
+                                    </div>
+                                </div>
+
+                                <div class="border-light-gray rounded-10 bg-white text-right mt-3">
+                                    <div class="p-2 row m-auto align-items-center">
+                                        <h5 class="text-16 text-dark-gray m-0">
+                                            <i class="fas fa-sort-amount-down ml-2"></i> مرتب سازی بر اساس:
+                                        </h5>
+
+                                        <a href="" class="py-1 px-2 text-14 mx-3 text-light-gray">جدیدترین</a>
+                                        <a href="" class="py-1 px-2 text-14 mx-3 text-light-gray">بیشترین امتیاز</a>
+                                        <a href="" class="py-1 px-2 text-14 mx-3 bg-water-blue text-white rounded-10">مفیدترین نظرات</a>
+                                    </div>
+                                </div>
+
+                                <div class="w-100 rounded-10 bg-white border-light-gray mt-3">
+                                    <div class="card-header py-1 px-3">
+                                        <div class="d-flex flex-row align-items-center justify-content-between">
+                                            <div>
+                                                <h5 class="m-0 text-light-gray text-14">
+                                                    <i class="fas fa-user text-gray text-20 ml-3"></i> نظر ناهید در تاریخ ۲۲ آبان ۱۳۹۷
+                                                </h5>
+                                            </div>
+
+                                            <div class="h-100 text-center">
+                                                <button class="my-btn bg-transparent text-dark-mint text-12">
+                                                    <i class="fas fa-thumbs-up"></i>
+                                                    <p class="m-0">۲</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-3">
+                                        <div class="row text-right">
+                                            <div class="col-5 d-flex flex-column">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    <b class="w-50 text-16">علت مراجعه</b>
+                                                    <h5 class="w-50 text-16 text-light-gray m-0">پیگیری روند درمان</h5>
+                                                </div>
+                                                <div class="d-flex flex-row align-items-center mt-2">
+                                                    <b class="w-50 text-16">امتیاز به پزشک</b>
+                                                    <h5 class="w-50 text-16 text-light-gray m-0">
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-7">
+                                                <p class="m-0 lh-30 text-light-gray text-justify">
+                                                    خیلی مختصر و مفید همه چیزایی که لازمه بدونن و میپرسن و مدارک و دقیق چک میکنند و راه حل درستی پیش روی بیمار میزارن تشخبصشون کاملا درست بود و علاوه بر همه این ها دکتر بسیار رفتار خوب و با محبتی داشتن ، من خیلی دیر رسیدم و چون مدام با منشی در ارتباط بودم
+                                                    دکتر لطف کردن و منتظر من موندن - همیشه از سایت درمانکده استفاده میکنم چون میتونم پزشکان مورد نظرمو پیدا کنم و دغدغه نوبت گیری از مطب و ندارم و خیلی راحت میتونم مراجعه کنم.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="w-100 rounded-10 bg-white border-light-gray mt-3">
+                                    <div class="card-header py-1 px-3">
+                                        <div class="d-flex flex-row align-items-center justify-content-between">
+                                            <div>
+                                                <h5 class="m-0 text-light-gray text-14">
+                                                    <i class="fas fa-user text-gray text-20 ml-3"></i> نظر ناهید در تاریخ ۲۲ آبان ۱۳۹۷
+                                                </h5>
+                                            </div>
+
+                                            <div class="h-100 text-center">
+                                                <button class="my-btn bg-transparent text-dark-mint text-12">
+                                                    <i class="fas fa-thumbs-up"></i>
+                                                    <p class="m-0">۲</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-3">
+                                        <div class="row text-right">
+                                            <div class="col-5 d-flex flex-column">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    <b class="w-50 text-16">علت مراجعه</b>
+                                                    <h5 class="w-50 text-16 text-light-gray m-0">پیگیری روند درمان</h5>
+                                                </div>
+                                                <div class="d-flex flex-row align-items-center mt-2">
+                                                    <b class="w-50 text-16">امتیاز به پزشک</b>
+                                                    <h5 class="w-50 text-16 text-light-gray m-0">
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-7">
+                                                <p class="m-0 lh-30 text-light-gray text-justify">
+                                                    خیلی مختصر و مفید همه چیزایی که لازمه بدونن و میپرسن و مدارک و دقیق چک میکنند و راه حل درستی پیش روی بیمار میزارن تشخبصشون کاملا درست بود و علاوه بر همه این ها دکتر بسیار رفتار خوب و با محبتی داشتن ، من خیلی دیر رسیدم و چون مدام با منشی در ارتباط بودم
+                                                    دکتر لطف کردن و منتظر من موندن - همیشه از سایت درمانکده استفاده میکنم چون میتونم پزشکان مورد نظرمو پیدا کنم و دغدغه نوبت گیری از مطب و ندارم و خیلی راحت میتونم مراجعه کنم.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="w-100 rounded-10 bg-white border-light-gray mt-3">
+                                    <div class="card-header py-1 px-3">
+                                        <div class="d-flex flex-row align-items-center justify-content-between">
+                                            <div>
+                                                <h5 class="m-0 text-light-gray text-14">
+                                                    <i class="fas fa-user text-gray text-20 ml-3"></i> نظر ناهید در تاریخ ۲۲ آبان ۱۳۹۷
+                                                </h5>
+                                            </div>
+
+                                            <div class="h-100 text-center">
+                                                <button class="my-btn bg-transparent text-dark-mint text-12">
+                                                    <i class="fas fa-thumbs-up"></i>
+                                                    <p class="m-0">۲</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-3">
+                                        <div class="row text-right">
+                                            <div class="col-5 d-flex flex-column">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    <b class="w-50 text-16">علت مراجعه</b>
+                                                    <h5 class="w-50 text-16 text-light-gray m-0">پیگیری روند درمان</h5>
+                                                </div>
+                                                <div class="d-flex flex-row align-items-center mt-2">
+                                                    <b class="w-50 text-16">امتیاز به پزشک</b>
+                                                    <h5 class="w-50 text-16 text-light-gray m-0">
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-7">
+                                                <p class="m-0 lh-30 text-light-gray text-justify">
+                                                    خیلی مختصر و مفید همه چیزایی که لازمه بدونن و میپرسن و مدارک و دقیق چک میکنند و راه حل درستی پیش روی بیمار میزارن تشخبصشون کاملا درست بود و علاوه بر همه این ها دکتر بسیار رفتار خوب و با محبتی داشتن ، من خیلی دیر رسیدم و چون مدام با منشی در ارتباط بودم
+                                                    دکتر لطف کردن و منتظر من موندن - همیشه از سایت درمانکده استفاده میکنم چون میتونم پزشکان مورد نظرمو پیدا کنم و دغدغه نوبت گیری از مطب و ندارم و خیلی راحت میتونم مراجعه کنم.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="w-100 rounded-10 bg-white border-light-gray mt-3">
+                                    <div class="card-header py-1 px-3">
+                                        <div class="d-flex flex-row align-items-center justify-content-between">
+                                            <div>
+                                                <h5 class="m-0 text-light-gray text-14">
+                                                    <i class="fas fa-user text-gray text-20 ml-3"></i> نظر ناهید در تاریخ ۲۲ آبان ۱۳۹۷
+                                                </h5>
+                                            </div>
+
+                                            <div class="h-100 text-center">
+                                                <button class="my-btn bg-transparent text-dark-mint text-12">
+                                                    <i class="fas fa-thumbs-up"></i>
+                                                    <p class="m-0">۲</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-3">
+                                        <div class="row text-right">
+                                            <div class="col-5 d-flex flex-column">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    <b class="w-50 text-16">علت مراجعه</b>
+                                                    <h5 class="w-50 text-16 text-light-gray m-0">پیگیری روند درمان</h5>
+                                                </div>
+                                                <div class="d-flex flex-row align-items-center mt-2">
+                                                    <b class="w-50 text-16">امتیاز به پزشک</b>
+                                                    <h5 class="w-50 text-16 text-light-gray m-0">
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-7">
+                                                <p class="m-0 lh-30 text-light-gray text-justify">
+                                                    خیلی مختصر و مفید همه چیزایی که لازمه بدونن و میپرسن و مدارک و دقیق چک میکنند و راه حل درستی پیش روی بیمار میزارن تشخبصشون کاملا درست بود و علاوه بر همه این ها دکتر بسیار رفتار خوب و با محبتی داشتن ، من خیلی دیر رسیدم و چون مدام با منشی در ارتباط بودم
+                                                    دکتر لطف کردن و منتظر من موندن - همیشه از سایت درمانکده استفاده میکنم چون میتونم پزشکان مورد نظرمو پیدا کنم و دغدغه نوبت گیری از مطب و ندارم و خیلی راحت میتونم مراجعه کنم.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="w-100 rounded-10 bg-white border-light-gray mt-3">
+                                    <div class="card-header py-1 px-3">
+                                        <div class="d-flex flex-row align-items-center justify-content-between">
+                                            <div>
+                                                <h5 class="m-0 text-light-gray text-14">
+                                                    <i class="fas fa-user text-gray text-20 ml-3"></i> نظر ناهید در تاریخ ۲۲ آبان ۱۳۹۷
+                                                </h5>
+                                            </div>
+
+                                            <div class="h-100 text-center">
+                                                <button class="my-btn bg-transparent text-dark-mint text-12">
+                                                    <i class="fas fa-thumbs-up"></i>
+                                                    <p class="m-0">۲</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="p-3">
+                                        <div class="row text-right">
+                                            <div class="col-5 d-flex flex-column">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    <b class="w-50 text-16">علت مراجعه</b>
+                                                    <h5 class="w-50 text-16 text-light-gray m-0">پیگیری روند درمان</h5>
+                                                </div>
+                                                <div class="d-flex flex-row align-items-center mt-2">
+                                                    <b class="w-50 text-16">امتیاز به پزشک</b>
+                                                    <h5 class="w-50 text-16 text-light-gray m-0">
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                        <i class="fas fa-star text-water-blue"></i>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-7">
+                                                <p class="m-0 lh-30 text-light-gray text-justify">
+                                                    خیلی مختصر و مفید همه چیزایی که لازمه بدونن و میپرسن و مدارک و دقیق چک میکنند و راه حل درستی پیش روی بیمار میزارن تشخبصشون کاملا درست بود و علاوه بر همه این ها دکتر بسیار رفتار خوب و با محبتی داشتن ، من خیلی دیر رسیدم و چون مدام با منشی در ارتباط بودم
+                                                    دکتر لطف کردن و منتظر من موندن - همیشه از سایت درمانکده استفاده میکنم چون میتونم پزشکان مورد نظرمو پیدا کنم و دغدغه نوبت گیری از مطب و ندارم و خیلی راحت میتونم مراجعه کنم.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -1,16 +1,8 @@
 @font-face {
     font-family: 'Yekan';
-    src: url('../assets/fonts/yekan-font/Yekan.eot');
-    /* IE9 Compat Modes */
-    src: url('../assets/fonts/yekan-font/Yekan.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../assets/fonts/yekan-font/Yekan.woff2') format('woff2'), /* Modern Browsers */
-    url('../assets/fonts/yekan-font/Yekan.woff') format('woff'), /* Modern Browsers */
-    url('../assets/fonts/yekan-font/Yekan.otf') format('opentype'), /* Open Type Font */
-    url('../assets/fonts/yekan-font/Yekan.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../assets/fonts/yekan-font/Yekan.svg#Yekan') format('svg');
-    /* Legacy iOS */
-    font-weight: normal;
-    font-style: normal;
+    src: url('../assets/fonts/BYekan/BYekan.eot?#') format('eot'), url('../assets/fonts/BYekan/BYekan.ttf') format('truetype'), url('../assets/fonts/BYekan/BYekan.woff') format('woff');
+    /* font-style: normal;
+    font-weight: normal; */
 }
 
 html,
@@ -526,7 +518,7 @@ header ul li a i {
     width: .5rem;
     height: .5rem;
     border-radius: 50%;
-    background-color: #cdcdcd;
+    background-color: #ededed;
     margin: 0 .5rem;
 }
 
@@ -840,6 +832,10 @@ footer input[type=email] {
     border-radius: 10px 10px 0 0;
 }
 
+.rounded-top-right-10 {
+    border-radius: 0 10px 0 0;
+}
+
 .text-water-blue {
     color: #007bff;
 }
@@ -955,6 +951,7 @@ button.bg-orange:hover {
 
 .date-slider .day-container {
     width: 16.6666%;
+    text-align: center;
 }
 
 .date-slider .day-container .day {
@@ -973,8 +970,51 @@ button.bg-orange:hover {
     border-color: #1780df;
 }
 
-.date-slider .day-container .day.disabled {
+.date-slider .day-container .day:disabled {
     background-color: #ededed;
     border-color: #ededed;
     color: #acadaf;
+}
+
+.score-box {
+    background-color: #e5f2fe;
+}
+
+.go-to-comments {
+    position: absolute;
+    bottom: 0;
+    left: 0
+}
+
+.hover-orange:hover {
+    color: #fb815e !important;
+}
+
+.tab {
+    background-color: #fff;
+    color: #1780df;
+}
+
+.tab:hover {
+    color: #fb815e;
+}
+
+.tab.active,
+.tab.active:hover {
+    position: relative;
+    top: 1px;
+    color: #1780df;
+}
+
+.my-btn {
+    outline: none;
+    border: none;
+}
+
+.progress {
+    height: 6px !important;
+}
+
+.progress-bar {
+    border-radius: 4px;
 }
