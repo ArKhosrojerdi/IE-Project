@@ -1,16 +1,8 @@
 @font-face {
     font-family: 'Yekan';
-    src: url('../assets/fonts/yekan-font/Yekan.eot');
-    /* IE9 Compat Modes */
-    src: url('../assets/fonts/yekan-font/Yekan.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../assets/fonts/yekan-font/Yekan.woff2') format('woff2'), /* Modern Browsers */
-    url('../assets/fonts/yekan-font/Yekan.woff') format('woff'), /* Modern Browsers */
-    url('../assets/fonts/yekan-font/Yekan.otf') format('opentype'), /* Open Type Font */
-    url('../assets/fonts/yekan-font/Yekan.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../assets/fonts/yekan-font/Yekan.svg#Yekan') format('svg');
-    /* Legacy iOS */
-    font-weight: normal;
-    font-style: normal;
+    src: url('../assets/fonts/BYekan/BYekan.eot?#') format('eot'), url('../assets/fonts/BYekan/BYekan.ttf') format('truetype'), url('../assets/fonts/BYekan/BYekan.woff') format('woff');
+    /* font-style: normal;
+    font-weight: normal; */
 }
 
 html,
@@ -526,7 +518,7 @@ header ul li a i {
     width: .5rem;
     height: .5rem;
     border-radius: 50%;
-    background-color: #cdcdcd;
+    background-color: #ededed;
     margin: 0 .5rem;
 }
 
@@ -836,6 +828,14 @@ footer input[type=email] {
     border-radius: 0 0 10px 10px;
 }
 
+.rounded-top-10 {
+    border-radius: 10px 10px 0 0;
+}
+
+.rounded-top-right-10 {
+    border-radius: 0 10px 0 0;
+}
+
 .text-water-blue {
     color: #007bff;
 }
@@ -890,4 +890,131 @@ footer input[type=email] {
 button.bg-orange:hover {
     transition: .2s all;
     background-color: #fa6f48;
+}
+
+.hover-p:hover {
+    stroke: #fa6f48;
+    fill: #fa6f48;
+    cursor: pointer;
+}
+
+.bg-gray {
+    background-color: #495057;
+}
+
+.bg-light-gray {
+    background-color: #6e7794;
+}
+
+.bg-ed {
+    background-color: #ededed;
+}
+
+.card {
+    border: 1px solid #e2e8f0;
+}
+
+.card:hover {
+    border-color: #fb815e !important;
+}
+
+.btn-outline-primary {
+    background-color: #fff !important;
+    color: #fb815e !important;
+    border-color: #fb815e !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #fb815e !important;
+    color: #fff !important;
+}
+
+.btn-primary {
+    color: #fff !important;
+    background-color: #fb815e !important;
+    border-color: #fb815e !important;
+}
+
+.btn-primary:hover {
+    outline: none !important;
+    color: #fff !important;
+    background-color: #fa6f48 !important;
+    border-color: #fa6f48 !important;
+}
+
+.date-slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.date-slider .day-container {
+    width: 16.6666%;
+    text-align: center;
+}
+
+.date-slider .day-container .day {
+    background-color: #fff;
+    color: #1780df;
+    border: 2px solid #ededed;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.date-slider .day-container .day.active {
+    background-color: #1780df;
+    color: #fff;
+    border-color: #1780df;
+}
+
+.date-slider .day-container .day:disabled {
+    background-color: #ededed;
+    border-color: #ededed;
+    color: #acadaf;
+}
+
+.score-box {
+    background-color: #e5f2fe;
+}
+
+.go-to-comments {
+    position: absolute;
+    bottom: 0;
+    left: 0
+}
+
+.hover-orange:hover {
+    color: #fb815e !important;
+}
+
+.tab {
+    background-color: #fff;
+    color: #1780df;
+}
+
+.tab:hover {
+    color: #fb815e;
+}
+
+.tab.active,
+.tab.active:hover {
+    position: relative;
+    top: 1px;
+    color: #1780df;
+}
+
+.my-btn {
+    outline: none;
+    border: none;
+}
+
+.progress {
+    height: 6px !important;
+}
+
+.progress-bar {
+    border-radius: 4px;
 }
