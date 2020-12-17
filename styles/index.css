@@ -674,6 +674,14 @@ footer ul li a i {
     width: 1px;
 }
 
+.w-10 {
+    width: 10% !important;
+}
+
+.w-90 {
+    width: 90% !important;
+}
+
 .w-35 {
     width: 35% !important;
 }
@@ -1017,4 +1025,124 @@ button.bg-orange:hover {
 
 .progress-bar {
     border-radius: 4px;
+}
+
+.card {
+    border: 1px solid #e2e8f0;
+}
+
+.card:hover {
+    border-color: #fb815e !important;
+}
+
+.btn-outline-primary {
+    background-color: #fff !important;
+    color: #fb815e !important;
+    border-color: #fb815e !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #fb815e !important;
+    color: #fff !important;
+}
+
+.doctors {
+    position: relative;
+    display: inline-block;
+    height: 30px;
+}
+
+.doctors img:nth-of-type(1) {
+    position: absolute;
+    width: 30px;
+    border-radius: 50%;
+    right: 0px;
+}
+
+.doctors img:nth-of-type(2) {
+    position: absolute;
+    width: 30px;
+    border-radius: 50%;
+    right: 20px;
+}
+
+.doctors img:nth-of-type(3) {
+    position: absolute;
+    width: 30px;
+    border-radius: 50%;
+    right: 40px;
+}
+
+.w-70 {
+    width: 70% !important;
+}
+
+.search-field button {
+    background-color: transparent;
+    color: #e5f2fe;
+    border: none;
+    outline: none;
+}
+
+.search-field input {
+    position: relative;
+    color: #3b4157;
+    padding: .75rem 2rem .75rem 0;
+    height: 50px;
+    font-size: 100%;
+}
+
+.search-field svg {
+    position: relative;
+    right: .6rem;
+    top: -2.3rem;
+}
+
+.sidebar {
+    height: 650px;
+    overflow-y: scroll;
+}
+
+.alphabet {
+    background-color: #e5f2fe;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+}
+
+.categories a {
+    width: max-content;
+    border: 1px solid transparent;
+}
+
+.categories a:hover {
+    color: #007bff !important;
+    background-color: #fff;
+    border-bottom: 1px dashed #007bff !important;
+}
+
+.resp-container {
+    max-width: 90%;
+    padding: 0 5%;
+    margin: auto;
+}
+
+.position-static {
+    position: static;
+}
+
+aside {
+    display: block !important;
+}
+
+.fixed-top {
+    z-index: 1030;
+    position: fixed;
+    top: 0;
+}
+
+.fixed-bottom {
+    bottom: 0;
 }
