@@ -836,6 +836,10 @@ footer input[type=email] {
     border-radius: 0 0 10px 10px;
 }
 
+.rounded-top-10 {
+    border-radius: 10px 10px 0 0;
+}
+
 .text-water-blue {
     color: #007bff;
 }
@@ -890,4 +894,87 @@ footer input[type=email] {
 button.bg-orange:hover {
     transition: .2s all;
     background-color: #fa6f48;
+}
+
+.hover-p:hover {
+    stroke: #fa6f48;
+    fill: #fa6f48;
+    cursor: pointer;
+}
+
+.bg-gray {
+    background-color: #495057;
+}
+
+.bg-light-gray {
+    background-color: #6e7794;
+}
+
+.bg-ed {
+    background-color: #ededed;
+}
+
+.card {
+    border: 1px solid #e2e8f0;
+}
+
+.card:hover {
+    border-color: #fb815e !important;
+}
+
+.btn-outline-primary {
+    background-color: #fff !important;
+    color: #fb815e !important;
+    border-color: #fb815e !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #fb815e !important;
+    color: #fff !important;
+}
+
+.btn-primary {
+    color: #fff !important;
+    background-color: #fb815e !important;
+    border-color: #fb815e !important;
+}
+
+.btn-primary:hover {
+    outline: none !important;
+    color: #fff !important;
+    background-color: #fa6f48 !important;
+    border-color: #fa6f48 !important;
+}
+
+.date-slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.date-slider .day-container {
+    width: 16.6666%;
+}
+
+.date-slider .day-container .day {
+    background-color: #fff;
+    color: #1780df;
+    border: 2px solid #ededed;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.date-slider .day-container .day.active {
+    background-color: #1780df;
+    color: #fff;
+    border-color: #1780df;
+}
+
+.date-slider .day-container .day.disabled {
+    background-color: #ededed;
+    border-color: #ededed;
+    color: #acadaf;
 }
