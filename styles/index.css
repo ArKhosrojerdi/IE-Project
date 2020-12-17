@@ -886,3 +886,8 @@ footer input[type=email] {
 .rounded-circle {
     border-radius: 50%;
 }
+
+button.bg-orange:hover {
+    transition: .2s all;
+    background-color: #fa6f48;
+}
