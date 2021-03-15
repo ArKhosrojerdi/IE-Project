@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aae9cea2-53b2-4fef-9690-7d15743f5761" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-    </list>
+    <list default="true" id="aae9cea2-53b2-4fef-9690-7d15743f5761" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607979290120</updated>
       <workItem from="1607979293208" duration="65000" />
-      <workItem from="1615812676805" duration="176000" />
+      <workItem from="1615812676805" duration="214000" />
     </task>
     <servers />
   </component>
@@ -65,5 +61,21 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="300" y="191" width="1079" height="725" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1615812868687" />
+    <state width="1654" height="272" key="GridCell.Tab.0.bottom" timestamp="1615812872043">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1654" height="272" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1615812872043" />
+    <state width="1654" height="272" key="GridCell.Tab.0.center" timestamp="1615812872040">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1654" height="272" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1615812872040" />
+    <state width="1654" height="272" key="GridCell.Tab.0.left" timestamp="1615812872039">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1654" height="272" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1615812872039" />
+    <state width="1654" height="272" key="GridCell.Tab.0.right" timestamp="1615812872042">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1654" height="272" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1615812872042" />
   </component>
 </project>
