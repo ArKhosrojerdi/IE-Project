@@ -2,7 +2,7 @@
   <div class="d-flex flex-row rtl">
     <div class="d-flex flex-column align-items-center justify-content-center bg-blue vh-100 welcome">
       <div class="w-100 text-center my-3">
-        <img src="../../public/images/svgs/footer-icon.svg" alt="" class="h-100">
+        <img src="../../../public/images/svgs/footer-icon.svg" alt="" class="h-100">
       </div>
       <div class="text-center">
         <h4 class="text-22 text-white m-0">به درمانکده خوش آمدید</h4>
@@ -13,7 +13,7 @@
     <div class="login-panel w-100 vh-100 d-flex flex-column justify-content-center align-items-center">
       <div class="w-50 text-center mb-4">
         <div class="my-5">
-          <h5 class="text-28 text-normal my-3">ورود پزشک</h5>
+          <h5 class="text-28 text-normal my-3">ورود بیمار</h5>
           <h5 class="text-18 text-normal">برای ورود اطلاعات خود را وارد کنید.</h5>
         </div>
 
@@ -37,7 +37,7 @@
         </div>
 
         <div class="mt-3">
-          <router-link to="doctor-profile" @click="login">
+          <router-link to="user-profile" @click="login">
             <button class="w-100 text-18">
               ورود
               <i class="fas fa-angle-double-left mr-1"></i>
@@ -48,15 +48,15 @@
             کد معرف دارید؟
           </button>
 
-          <router-link to="signup-doctor">
+          <router-link to="signup">
             <button class="w-25 text-16 mt-3 mr-2">
               اکانت ندارید؟
             </button>
           </router-link>
 
-          <router-link to="login">
+          <router-link to="login-doctor">
             <button class="w-25 text-16 mt-3 mr-2">
-              بیماری؟
+              دکتری؟
             </button>
           </router-link>
         </div>
@@ -66,32 +66,37 @@
 </template>
 
 <script>
-import {mapGetters} from "vuex";
+import {mapGetters, mapActions} from "vuex";
 
 export default {
-  name: "LoginDoctor",
+  name: "Login",
   data() {
     return {
-      cellphone: '',
-      username: '',
-      password: ''
+      cellphone: '09197321182',
+      username: 'axiroo',
+      password: '12345'
     }
   },
   methods: {
     ...mapGetters([
       "getUrl"
     ]),
+    ...mapActions(
+        ['setUid']
+    ),
+    // ...mapMutations(['setUid']),
     login() {
-      this.axios.post("http://localhost/", {
+      this.axios.post(this.getUrl() + "user/login", {
         cellphone: this.cellphone,
         username: this.username,
         password: this.password
+      }).then((response) => {
+        // if (response.status === 200)
+        console.log(response)
+        //   this.setUid({id: response.data});
       })
     }
   },
-  created() {
-    console.log(this.getUrl())
-  }
 }
 </script>
 

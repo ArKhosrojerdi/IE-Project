@@ -2,7 +2,7 @@
   <div class="d-flex flex-row rtl">
     <div class="d-flex flex-column align-items-center justify-content-center bg-blue vh-100 welcome">
       <div class="w-100 text-center my-3">
-        <img src="../../public/images/svgs/footer-icon.svg" alt="" class="h-100">
+        <img src="../../../public/images/svgs/footer-icon.svg" alt="" class="h-100">
       </div>
       <div class="text-center">
         <h4 class="text-22 text-white m-0">به درمانکده خوش آمدید</h4>

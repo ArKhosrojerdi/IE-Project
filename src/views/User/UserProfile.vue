@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import UserProfileField from "../components/UserProfileField";
+import UserProfileField from "../../components/UserProfileField";
 import {mapGetters} from "vuex";
 
 export default {

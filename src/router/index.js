@@ -1,15 +1,15 @@
 import {createRouter, createWebHistory} from 'vue-router';
 
 import Home from '../views/Home.vue';
-import Login from '../views/Login.vue';
+import Login from '../views/User/Login.vue';
 import Specialties from '../views/Specialties.vue';
-import Doctors from '../views/Doctors.vue';
+import Doctors from '../views/Doctor/Doctors.vue';
 import Profile from '../views/Profile.vue';
-import Signup from '../views/Signup.vue';
-import LoginDoctor from '../views/LoginDoctor.vue';
-import SignupDoctor from "../views/SignupDoctor";
-import UserProfile from "../views/UserProfile";
-import DoctorProfile from "../views/DoctorProfile";
+import Signup from '../views/User/Signup.vue';
+import LoginDoctor from '../views/Doctor/LoginDoctor.vue';
+import SignupDoctor from "../views/Doctor/SignupDoctor";
+import UserProfile from "../views/User/UserProfile";
+import DoctorProfile from "../views/Doctor/DoctorProfile";
 
 const routes = [
     {

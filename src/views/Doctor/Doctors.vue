@@ -35,7 +35,7 @@
             <aside class="w-100 position-sticky fixed-top">
               <!-- Image -->
               <div>
-                <img src="../../public/images/pngs/65c8ef8.png" alt="" class="img-fluid">
+                <img src="../../../public/images/pngs/65c8ef8.png" alt="" class="img-fluid">
               </div>
 
               <!-- Search Box -->
@@ -275,7 +275,7 @@
         <div class="body d-flex flex-row justify-content-center mt-2">
           <div class="my-card ml-5">
             <a href="">
-              <img src="../../public/images/pngs/994ebdc.png" alt="" class="mb-2">
+              <img src="../../../public/images/pngs/994ebdc.png" alt="" class="mb-2">
             </a>
             <a href="">
               <h4 class="my-3 text-bold">
@@ -293,7 +293,7 @@
           </div>
           <div class="my-card mr-5">
             <a href="">
-              <img src="../../public/images/pngs/4126cda.png" alt="" class="mb-2">
+              <img src="../../../public/images/pngs/4126cda.png" alt="" class="mb-2">
             </a>
             <a href="">
               <h4 class="my-3 text-bold">
